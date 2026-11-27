@@ -6,6 +6,7 @@ import { Store } from './store.js';
 import { systemTheme } from './utils.js';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
 import NotFound from './pages/NotFound.jsx';
 import './App.css';
 
@@ -69,6 +70,7 @@ function App() {
       />
       <main>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

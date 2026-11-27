@@ -1,0 +1,18 @@
+/* Styles for components/ProductGrid.jsx */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+}
+@media (max-width: 1000px) {
+  .product-grid {
+    gap: 13px;
+  }
+}
+@media (max-width: 720px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px 10px;
+  }
+}

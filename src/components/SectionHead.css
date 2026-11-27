@@ -1,0 +1,35 @@
+/* Styles for components/SectionHead.jsx */
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 29px;
+}
+.section-head h2 {
+  font: 500 36px/1.18 var(--display);
+  letter-spacing: -0.055em;
+  margin: 10px 0 0;
+}
+.section-head h2 em {
+  font: italic 500 1em var(--serif);
+  color: #81927c;
+  letter-spacing: -0.045em;
+}
+@media (max-width: 720px) {
+  .section-head {
+    align-items: flex-end;
+    margin-bottom: 22px;
+  }
+  .section-head h2 {
+    font-size: 28px;
+  }
+  .section-link {
+    font-size: 0;
+    gap: 4px;
+  }
+  .section-link svg {
+    width: 19px;
+    height: 19px;
+  }
+}

@@ -1,0 +1,130 @@
+/* Styles for components/Newsletter.jsx */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.newsletter {
+  background: #e9ede5;
+  min-height: 255px;
+  padding: 47px max(calc((100vw - var(--max)) / 2 + 42px), 6vw);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.newsletter-copy,
+.newsletter-form {
+  position: relative;
+  z-index: 1;
+}
+.newsletter-copy h2 {
+  font: 500 30px/1.18 var(--display);
+  letter-spacing: -0.05em;
+  margin: 11px 0;
+}
+.newsletter-copy p {
+  font-size: 13px;
+  color: #727970;
+  max-width: 300px;
+  line-height: 1.7;
+  margin: 0;
+}
+.newsletter-form {
+  width: 39%;
+  max-width: 400px;
+}
+.input-arrow {
+  display: flex;
+  border-bottom: 1px solid #737d70;
+  padding: 0 0 8px;
+}
+.input-arrow input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  flex: 1;
+  font-size: 13px;
+}
+.input-arrow button {
+  border: 0;
+  background: none;
+  display: grid;
+  place-items: center;
+}
+.newsletter-form small {
+  display: block;
+  color: #8b9089;
+  font-size: 12px;
+  margin-top: 11px;
+}
+.newsletter-form small a {
+  text-decoration: underline;
+}
+.newsletter-success {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 15px;
+  color: #51664f;
+}
+.newsletter-orb {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid #cbd7c5;
+  border-radius: 50%;
+  right: -60px;
+  bottom: -120px;
+}
+@media (max-width: 720px) {
+  .newsletter {
+    padding: 38px 23px;
+    display: block;
+    min-height: unset;
+  }
+  .newsletter-copy h2 {
+    font-size: 27px;
+  }
+  .newsletter-copy p {
+    max-width: 280px;
+  }
+  .newsletter-form {
+    width: 100%;
+    max-width: none;
+    margin-top: 24px;
+  }
+  .newsletter-orb {
+    width: 150px;
+    height: 150px;
+    right: -80px;
+    bottom: -70px;
+  }
+}
+
+/* ---------- Dark mode ---------- */
+
+[data-theme='dark'] .newsletter {
+  background: #292b27;
+}
+
+[data-theme='dark'] .newsletter-copy p {
+  color: #9fa39f;
+}
+
+[data-theme='dark'] .newsletter-success {
+  color: #aeb9ad;
+}
+
+[data-theme='dark'] .newsletter-orb {
+  border: 1px solid #434841;
+}
