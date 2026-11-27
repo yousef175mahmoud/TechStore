@@ -4,6 +4,8 @@ import { Check } from 'lucide-react';
 import { usePersistentState } from './hooks/usePersistentState.js';
 import { Store } from './store.js';
 import { systemTheme } from './utils.js';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
 import NotFound from './pages/NotFound.jsx';
 import './App.css';
 
@@ -59,11 +61,18 @@ function App() {
   };
   return (
     <Store.Provider value={value}>
+      <Header
+        menu={menu}
+        setMenu={setMenu}
+        searchOpen={searchOpen}
+        setSearchOpen={setSearchOpen}
+      />
       <main>
         <Routes>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Footer />
       {toast && (
         <div className="toast">
           <Check size={17} />
